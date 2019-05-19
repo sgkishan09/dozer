@@ -38,6 +38,7 @@ public class JavaBeanPropertyDescriptor extends GetterSetterPropertyDescriptor {
     public JavaBeanPropertyDescriptor(Class<?> clazz, String fieldName, boolean isIndexed, int index,
                                       HintContainer srcDeepIndexHintContainer, HintContainer destDeepIndexHintContainer,
                                       BeanContainer beanContainer, DestBeanCreator destBeanCreator) {
+        fieldName = fieldName.replaceAll("\\s+", "");
         super(clazz, fieldName, isIndexed, index, srcDeepIndexHintContainer, destDeepIndexHintContainer, beanContainer, destBeanCreator);
     }
 
